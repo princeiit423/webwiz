@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebWiz | Inquiry Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <style>
+    body { font-family: 'Poppins', sans-serif; background-color: #000; color: white; }
+    .glass { backdrop-filter: blur(15px); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); }
+    .gradient-text { background: linear-gradient(90deg,#64CCC5,#1e3c72); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .btn-glass { 
+      padding: 0.75rem 1.5rem; border-radius: 9999px; font-weight: 600; transition: all 0.3s ease; 
+      backdrop-filter: blur(10px); background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); 
+      display: inline-flex; align-items: center; gap: 0.5rem;
+    }
+    .btn-glass:hover { transform: scale(1.05); }
+    .animate-blob { animation: blob 7s infinite; }
+    .animation-delay-2000 { animation-delay: 2s; }
+    @keyframes blob { 0%,100%{transform:translate(0,0) scale(1);}33%{transform:translate(30px,-50px) scale(1.1);}66%{transform:translate(-20px,20px) scale(0.9);} }
+  
+/* Glassmorphism */
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Hover Floating Animation */
+    .hover-float {
+      transition: all 0.4s ease;
+    }
+    .hover-float:hover {
+      transform: translateY(-8px) scale(1.02);
+    }
+
+    /* Fade-in Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .fade {
+      animation: fadeIn 1s ease forwards;
+    }
+
+    /* Highlight Color */
+    .teal-gradient {
+      background: linear-gradient(90deg, #64ccc5, #009b9b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Elegant Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #64ccc5;
+      border-radius: 10px;
+    }
+</style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header
+    class="flex justify-between items-center px-6 md:px-16 py-6 sticky top-0 z-50 glass rounded-b-2xl"
+  >
+    <div class="text-2xl font-bold flex items-center space-x-2">
+      <span class="teal-gradient">⚪ WebWiz</span>
+    </div>
+    <nav class="hidden md:flex space-x-8">
+      <a href="index.html" class="text-gray-300 hover:text-teal-400 transition">Home</a>
+      <a href="about.html" class="text-gray-300 hover:text-teal-400 transition">About</a>
+      <a href="portfolio.html" class="text-gray-300 hover:text-teal-400 transition">Portfolio</a>
+      <a href="contact.html" class="text-gray-300 hover:text-teal-400 transition">Contact</a>
+    </nav>
+    <a href="contact.html">
+      <button
+        class="px-5 py-2 border border-teal-400 rounded-full text-teal-400 hover:bg-teal-400 hover:text-black transition"
+      >
+        Get in touch
+      </button>
+    </a>
+  </header>
+
+<!-- Hero Section -->
+<section class="flex justify-center items-center min-h-[35vh] px-6 md:px-16 py-20 relative overflow-hidden">
+  <div class="text-center z-10">
+    <h1 class="text-4xl md:text-5xl font-bold gradient-text">Get in Touch</h1>
+    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Fill out the form below and let’s start building your digital success story with WebWiz.</p>
+  </div>
+  <!-- Abstract shapes -->
+  <div class="absolute top-0 left-1/4 w-72 h-72 bg-gradient-to-tr from-teal-500 to-cyan-400 rounded-full opacity-30 blur-3xl animate-blob"></div>
+  <div class="absolute bottom-0 right-1/3 w-72 h-72 bg-gradient-to-tr from-purple-500 to-pink-400 rounded-full opacity-30 blur-3xl animate-blob animation-delay-2000"></div>
+</section>
+
+<!-- Inquiry Form Section -->
+<section class="flex justify-center items-center p-6 md:px-16 mb-16">
+  <div class="w-full max-w-3xl glass p-10 rounded-3xl shadow-lg relative overflow-hidden">
+    <h2 class="text-3xl md:text-4xl font-bold gradient-text text-center mb-8">Web Agency Inquiry Form</h2>
+
+    <form action="https://formspree.io/f/xeorznnw" method="POST" class="space-y-6">
+      <div>
+        <label class="block text-white text-sm font-semibold mb-2">Full Name</label>
+        <input name="fullName" type="text" placeholder="Enter your name" required class="w-full px-4 py-3 rounded-xl bg-black/40 text-white border border-gray-700 focus:border-teal-400 focus:ring-teal-400 focus:ring-1 outline-none">
+      </div>
+
+      <div>
+        <label class="block text-white text-sm font-semibold mb-2">Email Address</label>
+        <input name="email" type="email" placeholder="Enter your email" required class="w-full px-4 py-3 rounded-xl bg-black/40 text-white border border-gray-700 focus:border-teal-400 focus:ring-teal-400 focus:ring-1 outline-none">
+      </div>
+
+      <div>
+        <label class="block text-white text-sm font-semibold mb-2">Phone Number</label>
+        <input name="phone" type="tel" placeholder="Enter your phone number" required class="w-full px-4 py-3 rounded-xl bg-black/40 text-white border border-gray-700 focus:border-teal-400 focus:ring-teal-400 focus:ring-1 outline-none">
+      </div>
+
+      <div>
+        <label class="block text-white text-sm font-semibold mb-2">Project Type</label>
+        <select name="projectType" class="w-full px-4 py-3 rounded-xl bg-black/40 text-white border border-gray-700 focus:border-teal-400 focus:ring-teal-400 focus:ring-1 outline-none">
+          <option value="website-design">Website Design</option>
+          <option value="seo">SEO Optimization</option>
+          <option value="branding">Branding & Graphics</option>
+          <option value="ecommerce">E-Commerce Development</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block text-white text-sm font-semibold mb-2">Estimated Budget</label>
+        <input name="budget" type="number" placeholder="Enter your budget in INR" class="w-full px-4 py-3 rounded-xl bg-black/40 text-white border border-gray-700 focus:border-teal-400 focus:ring-teal-400 focus:ring-1 outline-none">
+      </div>
+
+      <div>
+        <label class="block text-white text-sm font-semibold mb-2">Project Description</label>
+        <textarea name="description" placeholder="Describe your project" class="w-full px-4 py-3 rounded-xl bg-black/40 text-white border border-gray-700 focus:border-teal-400 focus:ring-teal-400 focus:ring-1 outline-none h-32 resize-none"></textarea>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn-glass w-full justify-center mt-4 text-lg">Submit Inquiry</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-black text-white py-16 px-6 md:px-16 glass rounded-t-3xl">
+  <div class="grid md:grid-cols-4 gap-10 max-w-7xl mx-auto">
+    <div>
+      <h2 class="text-2xl font-bold mb-3 gradient-text">⚪ WebWiz</h2>
+      <p class="text-gray-400">A team of strategic creators and digital innovators united to build something extraordinary.</p>
+    </div>
+
+    <div>
+      <h3 class="text-lg font-semibold mb-3">Pages</h3>
+      <ul class="space-y-2 text-gray-400">
+        <li><a href="index.html" class="hover:text-teal-400">Home</a></li>
+        <li><a href="about.html" class="hover:text-teal-400">About</a></li>
+        <li><a href="portfolio.html" class="hover:text-teal-400">Portfolio</a></li>
+        <li><a href="contact.html" class="hover:text-teal-400">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-lg font-semibold mb-3">Resources</h3>
+      <ul class="space-y-2 text-gray-400">
+        <li><a href="#" class="hover:text-teal-400">License</a></li>
+        <li><a href="#" class="hover:text-teal-400">Changelog</a></li>
+        <li><a href="#" class="hover:text-teal-400">Support</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-lg font-semibold mb-3">Subscribe</h3>
+      <form action="/subscribe" method="post" class="flex bg-white/10 backdrop-blur-lg rounded-full overflow-hidden">
+        <input name="email" type="email" placeholder="Enter your email" class="px-4 py-2 bg-transparent text-white outline-none flex-grow">
+        <button class="px-5 py-2 bg-teal-400 text-black rounded-full m-1 hover:bg-white transition">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="mt-10 text-center text-gray-500 text-sm">
+    <p>© 2025 WebWiz — Crafted with ❤️ in India</p>
+  </div>
+</footer>
+
+</body>
+</html>

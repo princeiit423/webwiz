@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | WebWiz</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Outfit:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0a0a0a, #1b1b1b);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* Glassmorphism */
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Hover Floating Animation */
+    .hover-float {
+      transition: all 0.4s ease;
+    }
+    .hover-float:hover {
+      transform: translateY(-8px) scale(1.02);
+    }
+
+    /* Fade-in Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .fade {
+      animation: fadeIn 1s ease forwards;
+    }
+
+    /* Highlight Color */
+    .teal-gradient {
+      background: linear-gradient(90deg, #64ccc5, #009b9b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Elegant Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #64ccc5;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+   <!-- Header -->
+  <header
+    class="flex justify-between items-center px-6 md:px-16 py-6 sticky top-0 z-50 glass rounded-b-2xl"
+  >
+    <div class="text-2xl font-bold flex items-center space-x-2">
+      <span class="teal-gradient">⚪ WebWiz</span>
+    </div>
+    <nav class="hidden md:flex space-x-8">
+      <a href="index.html" class="text-gray-300 hover:text-teal-400 transition">Home</a>
+      <a href="about.html" class="text-gray-300 hover:text-teal-400 transition">About</a>
+      <a href="portfolio.html" class="text-gray-300 hover:text-teal-400 transition">Portfolio</a>
+      <a href="contact.html" class="text-gray-300 hover:text-teal-400 transition">Contact</a>
+    </nav>
+    <a href="contact.html">
+      <button
+        class="px-5 py-2 border border-teal-400 rounded-full text-teal-400 hover:bg-teal-400 hover:text-black transition"
+      >
+        Get in touch
+      </button>
+    </a>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="text-center py-20 px-6 md:px-16 fade">
+    <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-snug">
+      We are <span class="teal-gradient">WebWiz</span> — creating digital experiences that inspire.
+    </h1>
+    <p class="text-gray-400 max-w-3xl mx-auto text-lg">
+      We craft innovative and high-performing websites that connect brands with their audiences — blending creativity, strategy, and technology into one seamless experience.
+    </p>
+  </section>
+
+  <!-- About Section -->
+  <section
+    class="py-16 px-6 md:px-16 flex flex-col lg:flex-row items-center gap-12 glass rounded-3xl mx-6 md:mx-16 fade"
+  >
+    <div class="w-full lg:w-1/2 hover-float">
+      <img
+        src="Rectangle 26.png"
+        alt="WebWiz Team"
+        class="rounded-2xl shadow-2xl border border-gray-700"
+      />
+    </div>
+    <div class="w-full lg:w-1/2 space-y-5">
+      <h3 class="text-teal-400 font-semibold uppercase tracking-wide">Who We Are</h3>
+      <h2 class="text-4xl md:text-5xl font-bold">Empowering Businesses with Digital Excellence</h2>
+      <p class="text-gray-300 leading-relaxed">
+        <strong>WebWiz</strong> is a next-gen creative agency that helps businesses grow online. From web design and branding to marketing and SEO — we bring innovation, precision, and elegance to every project.
+      </p>
+
+      <div class="flex justify-between mt-8 text-center">
+        <div>
+          <p class="text-4xl font-bold text-teal-400">50+</p>
+          <p class="text-gray-400 text-sm">Happy Clients</p>
+        </div>
+        <div>
+          <p class="text-4xl font-bold text-teal-400">100+</p>
+          <p class="text-gray-400 text-sm">Projects Completed</p>
+        </div>
+        <div>
+          <p class="text-4xl font-bold text-teal-400">5+</p>
+          <p class="text-gray-400 text-sm">Years Experience</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-20 px-6 md:px-16 text-center fade">
+    <h3 class="text-teal-400 font-semibold uppercase">Why Choose WebWiz</h3>
+    <h2 class="text-4xl md:text-5xl font-bold mt-3">
+      Your Partner for <span class="teal-gradient">Digital Success</span>
+    </h2>
+    <p class="text-gray-400 mt-4 max-w-3xl mx-auto">
+      We believe in building trust and transparency — ensuring every project we deliver aligns perfectly with your goals and audience.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-14">
+      <div class="glass p-8 rounded-2xl hover-float">
+        <div class="text-4xl mb-3">🤝</div>
+        <h3 class="font-semibold text-xl mb-2">Client-Centric Approach</h3>
+        <p class="text-gray-400">Your vision drives our creation — ensuring your brand’s essence shines online.</p>
+      </div>
+      <div class="glass p-8 rounded-2xl hover-float">
+        <div class="text-4xl mb-3">💡</div>
+        <h3 class="font-semibold text-xl mb-2">Creative & Strategic</h3>
+        <p class="text-gray-400">We blend creativity with analytics to craft visually striking, goal-oriented solutions.</p>
+      </div>
+      <div class="glass p-8 rounded-2xl hover-float">
+        <div class="text-4xl mb-3">⚡</div>
+        <h3 class="font-semibold text-xl mb-2">Results That Matter</h3>
+        <p class="text-gray-400">From traffic to conversions, we focus on measurable impact that sustains growth.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section class="py-16 px-6 md:px-16 glass text-center rounded-3xl mx-6 md:mx-16 fade">
+    <h3 class="text-teal-400 font-semibold uppercase">Our Mission</h3>
+    <h2 class="text-4xl md:text-5xl font-bold mt-3">Driven by Passion, Guided by Purpose</h2>
+    <p class="text-gray-300 mt-6 leading-relaxed max-w-4xl mx-auto">
+      Our mission is to help businesses thrive with creativity and technology. Every website we build is designed to perform, impress, and connect — because your success fuels our purpose.
+    </p>
+  </section>
+
+  <!-- Team -->
+  <section class="py-20 px-6 md:px-16 text-center fade">
+    <h3 class="text-teal-400 font-semibold uppercase">Our Team</h3>
+    <h2 class="text-4xl md:text-5xl font-bold mt-3">Meet the Minds Behind WebWiz</h2>
+    <p class="text-gray-400 mt-4 max-w-3xl mx-auto">
+      A passionate collective of creators, developers, and strategists — united to build brands that last.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-14">
+      <div class="glass p-8 rounded-2xl hover-float">
+        <img
+          src="boy1.jpg"
+          class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-teal-400"
+          alt="Faiz Hussain"
+        />
+        <h3 class="font-semibold text-xl">Faiz Hussain</h3>
+        <p class="text-teal-400">CEO & Founder</p>
+      </div>
+      <div class="glass p-8 rounded-2xl hover-float">
+        <img
+          src="girl.jpg"
+          class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-teal-400"
+          alt="Sara Khan"
+        />
+        <h3 class="font-semibold text-xl">Sweta Singh</h3>
+        <p class="text-teal-400">Client Management</p>
+      </div>
+      <div class="glass p-8 rounded-2xl hover-float">
+        <img
+          src="boy2.jpg"
+          class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-teal-400"
+          alt="Rohan Mehta"
+        />
+        <h3 class="font-semibold text-xl">Md. Shahzar</h3>
+        <p class="text-teal-400">CTO & Tech Lead</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-16 px-6 md:px-16 glass mt-10 rounded-t-3xl fade">
+    <div class="grid md:grid-cols-4 gap-10 max-w-7xl mx-auto">
+      <div>
+        <h2 class="text-2xl font-bold mb-3 teal-gradient">⚪ WebWiz</h2>
+        <p class="text-gray-400">
+          A team of strategic creators and digital innovators united to build something extraordinary.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-semibold mb-3">Pages</h3>
+        <ul class="space-y-2 text-gray-400">
+          <li><a href="index.html" class="hover:text-teal-400">Home</a></li>
+          <li><a href="about.html" class="hover:text-teal-400">About</a></li>
+          <li><a href="portfolio.html" class="hover:text-teal-400">Portfolio</a></li>
+          <li><a href="contact.html" class="hover:text-teal-400">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-semibold mb-3">Resources</h3>
+        <ul class="space-y-2 text-gray-400">
+          <li><a href="#" class="hover:text-teal-400">License</a></li>
+          <li><a href="#" class="hover:text-teal-400">Changelog</a></li>
+          <li><a href="#" class="hover:text-teal-400">Support</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-semibold mb-3">Subscribe</h3>
+        <div class="flex bg-white/10 backdrop-blur-lg rounded-full overflow-hidden">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="px-4 py-2 bg-transparent text-white outline-none flex-grow"
+          />
+          <button class="px-5 py-2 bg-teal-400 text-black rounded-full m-1 hover:bg-white transition">
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10 text-center text-gray-500 text-sm">
+      <p>© 2025 WebWiz — Crafted with ❤️ in India</p>
+    </div>
+  </footer>
+</body>
+</html>

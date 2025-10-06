@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebWiz | Creative Web Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+    body { font-family: 'Poppins', sans-serif; }
+    .glass { backdrop-filter: blur(15px); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); }
+    .gradient-text { background: linear-gradient(90deg,#64CCC5,#1e3c72); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .btn-glass { 
+      padding: 0.75rem 1.5rem; border-radius: 9999px; font-weight: 600; transition: all 0.3s ease; 
+      backdrop-filter: blur(10px); background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); 
+      display: inline-flex; align-items: center; gap: 0.5rem;
+    }
+    .btn-glass:hover { transform: scale(1.05); }
+    @keyframes blob { 0%, 100% { transform: translate(0px,0px) scale(1);} 33% { transform: translate(30px,-50px) scale(1.1);} 66% { transform: translate(-20px,20px) scale(0.9);} }
+    .animate-blob { animation: blob 7s infinite; }
+    .animation-delay-2000 { animation-delay: 2s; }
+
+      @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-marquee {
+    display: inline-flex;
+    min-width: 200%;
+    animation: marquee 20s linear infinite;
+  }
+
+  /* Optional: pause on hover */
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+
+  /* Responsive font */
+  @media (max-width: 768px) {
+    .animate-marquee span {
+      font-size: 1rem;
+    }
+  }
+
+  /* Glassmorphism */
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Hover Floating Animation */
+    .hover-float {
+      transition: all 0.4s ease;
+    }
+    .hover-float:hover {
+      transform: translateY(-8px) scale(1.02);
+    }
+
+    /* Fade-in Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .fade {
+      animation: fadeIn 1s ease forwards;
+    }
+
+    /* Highlight Color */
+    .teal-gradient {
+      background: linear-gradient(90deg, #64ccc5, #009b9b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Elegant Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #64ccc5;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body class="bg-black text-white">
+
+  <!-- Header -->
+  <header
+    class="flex justify-between items-center px-6 md:px-16 py-6 sticky top-0 z-50 glass rounded-b-2xl"
+  >
+    <div class="text-2xl font-bold flex items-center space-x-2">
+      <span class="teal-gradient">⚪ WebWiz</span>
+    </div>
+    <nav class="hidden md:flex space-x-8">
+      <a href="index.html" class="text-gray-300 hover:text-teal-400 transition">Home</a>
+      <a href="about.html" class="text-gray-300 hover:text-teal-400 transition">About</a>
+      <a href="portfolio.html" class="text-gray-300 hover:text-teal-400 transition">Portfolio</a>
+      <a href="contact.html" class="text-gray-300 hover:text-teal-400 transition">Contact</a>
+    </nav>
+    <a href="contact.html">
+      <button
+        class="px-5 py-2 border border-teal-400 rounded-full text-teal-400 hover:bg-teal-400 hover:text-black transition"
+      >
+        Get in touch
+      </button>
+    </a>
+  </header>
+
+<!-- Hero Section -->
+<section class="flex flex-col-reverse md:flex-row items-center px-6 md:px-16 py-20 relative overflow-hidden">
+  <div class="md:w-1/2 space-y-6 z-10">
+    <h1 class="text-5xl md:text-6xl font-bold gradient-text leading-tight">
+      WebWiz <br>
+      Crafting Digital Experiences <br>
+      That Inspire
+    </h1>
+    <p class="text-gray-300 max-w-xl">
+      We’re a creative web studio delivering high-end websites and digital solutions that help businesses grow, stand out, and leave lasting impressions.
+    </p>
+    <div class="flex gap-4 mt-6">
+      <a href="form.html" class="btn-glass">Start Your Project</a>
+      <a href="portfolio.html" class="btn-glass">Our Work</a>
+    </div>
+  </div>
+  <div class="md:w-1/2 flex justify-center relative mb-10 md:mb-0">
+    <div class="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-gray-700 animate-pulse">
+      <img src="Ellipse 10.png" alt="WebWiz Team" class="w-full h-full object-cover">
+    </div>
+  </div>
+  <!-- Abstract shapes -->
+  <div class="absolute top-0 left-1/4 w-72 h-72 bg-gradient-to-tr from-teal-500 to-cyan-400 rounded-full opacity-30 blur-3xl animate-blob"></div>
+  <div class="absolute bottom-0 right-1/3 w-72 h-72 bg-gradient-to-tr from-purple-500 to-pink-400 rounded-full opacity-30 blur-3xl animate-blob animation-delay-2000"></div>
+</section>
+
+<!-- Brand Section -->
+<section class="px-6 md:px-16 py-10 bg-black/80">
+  <h3 class="text-green-400 font-semibold text-center mb-6">Trusted by Clients</h3>
+  
+  <!-- Marquee wrapper -->
+  <div class="overflow-hidden relative">
+    <div class="flex animate-marquee space-x-16">
+      <span class="text-gray-300 font-bold text-xl whitespace-nowrap">SIC - Innovative Solutions for Students</span>
+      <span class="text-gray-300 font-bold text-xl whitespace-nowrap">Prescripto - Transforming Healthcare Digitally</span>
+      <span class="text-gray-300 font-bold text-xl whitespace-nowrap">Helpfarmer - Revolutionizing Agriculture with Tech</span>
+      <span class="text-gray-300 font-bold text-xl whitespace-nowrap">SIC - Innovative Solutions for Students</span>
+      <span class="text-gray-300 font-bold text-xl whitespace-nowrap">Prescripto - Transforming Healthcare Digitally</span>
+      <span class="text-gray-300 font-bold text-xl whitespace-nowrap">Helpfarmer - Revolutionizing Agriculture with Tech</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- Services Section -->
+<section id="services" class="py-16 px-6 md:px-16 text-center">
+  <h3 class="text-teal-400 font-semibold text-lg">Our Services</h3>
+  <h2 class="text-4xl md:text-5xl font-bold mt-2 mb-12">Creative Solutions for Your Business</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="glass p-8 rounded-2xl shadow-lg hover:scale-105 transition">
+      <div class="text-4xl mb-4">💻</div>
+      <h3 class="font-semibold text-2xl mb-2">Web Development</h3>
+      <p class="text-gray-300">Building responsive, high-performing websites tailored to your brand and audience.</p>
+    </div>
+    <div class="glass p-8 rounded-2xl shadow-lg hover:scale-105 transition">
+      <div class="text-4xl mb-4">🎨</div>
+      <h3 class="font-semibold text-2xl mb-2">Web Design</h3>
+      <p class="text-gray-300">Designing modern, user-friendly interfaces that captivate and convert visitors.</p>
+    </div>
+    <div class="glass p-8 rounded-2xl shadow-lg hover:scale-105 transition">
+      <div class="text-4xl mb-4">🚀</div>
+      <h3 class="font-semibold text-2xl mb-2">Digital Strategy</h3>
+      <p class="text-gray-300">Crafting data-driven strategies to boost your brand’s online presence.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Workflow Section -->
+<section class="py-16 px-6 md:px-12 lg:px-24 text-center text-black bg-white">
+  <h2 class="text-lg text-teal-500 font-semibold">Development</h2>
+  <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">Process that moves things forward</h3>
+
+  <div class="mt-12 flex flex-col md:flex-row justify-center items-center gap-6">
+    <div class="flex-1 max-w-xs text-center p-6 bg-white shadow-lg rounded-lg">
+      <div class="w-12 h-12 mx-auto flex items-center justify-center bg-black text-white rounded-full">🚀</div>
+      <h4 class="text-xl font-semibold mt-4">Ideate</h4>
+      <p class="text-gray-600 text-sm mt-2">Building initial concepts to test ideas effectively.</p>
+    </div>
+    <div class="flex-1 max-w-xs text-center p-6 bg-white shadow-lg rounded-lg">
+      <div class="w-12 h-12 mx-auto flex items-center justify-center bg-black text-white rounded-full">🛠️</div>
+      <h4 class="text-xl font-semibold mt-4">Research</h4>
+      <p class="text-gray-600 text-sm mt-2">Transforming designs into fully functional products.</p>
+    </div>
+    <div class="flex-1 max-w-xs text-center p-6 bg-white shadow-lg rounded-lg">
+      <div class="w-12 h-12 mx-auto flex items-center justify-center bg-black text-white rounded-full">🎯</div>
+      <h4 class="text-xl font-semibold mt-4">Create</h4>
+      <p class="text-gray-600 text-sm mt-2">Launch products with stability, performance, and style.</p>
+    </div>
+    <div class="flex-1 max-w-xs text-center p-6 bg-white shadow-lg rounded-lg">
+      <div class="w-12 h-12 mx-auto flex items-center justify-center bg-black text-white rounded-full">✅</div>
+      <h4 class="text-xl font-semibold mt-4">Testing</h4>
+      <p class="text-gray-600 text-sm mt-2">Ensure quality, performance, and smooth user experience.</p>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="py-16 px-6 md:px-16 flex flex-col lg:flex-row items-center">
+  <div class="relative w-full lg:w-1/2">
+    <div class="absolute inset-0 bg-black opacity-30 rounded-lg"></div>
+    <img src="Rectangle 26.png" alt="Team" class="relative rounded-lg shadow-lg">
+  </div>
+  <div class="w-full lg:w-1/2 lg:pl-12 mt-8 lg:mt-0">
+    <h3 class="text-green-400 font-semibold text-lg">About us</h3>
+    <h2 class="text-3xl md:text-5xl font-bold mt-2">The core mission behind our work</h2>
+    <p class="text-gray-400 mt-4">We empower businesses with innovative digital solutions. Our projects combine creativity and technology to deliver results-driven websites and apps.</p>
+    <div class="flex gap-8 mt-6">
+      <div>
+        <p class="text-3xl font-bold text-green-400">330+</p>
+        <p class="text-gray-400">Companies helped</p>
+      </div>
+      <div>
+        <p class="text-3xl font-bold text-green-400">230+</p>
+        <p class="text-gray-400">Revenue generated</p>
+      </div>
+    </div>
+    <a href="form.html">
+      <button class="mt-6 btn-glass">
+        <div class="rounded-xl bg-black h-8 w-8 flex items-center justify-center"><i class="fa-solid fa-arrow-right text-white"></i></div>
+        Start your Free Trial
+      </button>
+    </a>
+  </div>
+</section>
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="py-12 px-6 bg-black/80 text-white text-center">
+  <h2 class="text-4xl font-bold mb-12">Recent Projects</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    <a href="https://student-innovation-center.vercel.app/" class="group relative block overflow-hidden rounded-xl shadow-lg">
+      <img src="Student.png" alt="Project 1" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+      <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition">
+        <h3 class="text-xl font-bold">Web Development</h3>
+        <p class="text-gray-300">Modern website development</p>
+      </div>
+    </a>
+    <a href="https://helpfarmer.vercel.app/" class="group relative block overflow-hidden rounded-xl shadow-lg">
+      <img src="crop.png" alt="Project 2" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+      <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition">
+        <h3 class="text-xl font-bold">Digital Marketing</h3>
+        <p class="text-gray-300">Social media campaigns & SEO</p>
+      </div>
+    </a>
+    <a href="https://internshala-project.onrender.com/" class="group relative block overflow-hidden rounded-xl shadow-lg">
+      <img src="Jobs.png" alt="Project 3" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+      <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition">
+        <h3 class="text-xl font-bold">UI/UX Design</h3>
+        <p class="text-gray-300">Creative rebranding & modern UI</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- Testimonial Section -->
+<section class="bg-gradient-to-r from-blue-50 to-purple-50 py-16">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-12 text-black">What Our Clients Say</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="bg-white/20 backdrop-blur-md rounded-xl p-6 shadow-lg hover:scale-105 transform transition duration-300">
+        <img src="https://i.pravatar.cc/100?img=1" alt="Client 1" class="w-16 h-16 mx-auto rounded-full mb-4 border-2 border-white/30">
+        <p class="text-gray-800 mb-4">“The team delivered an amazing website beyond our expectations. Highly professional!”</p>
+        <h3 class="font-semibold text-lg text-black">Rajat Sinha</h3>
+        <span class="text-sm text-gray-600">Advisory, SIC</span>
+      </div>
+      <div class="bg-white/20 backdrop-blur-md rounded-xl p-6 shadow-lg hover:scale-105 transform transition duration-300">
+        <img src="https://i.pravatar.cc/100?img=2" alt="Client 2" class="w-16 h-16 mx-auto rounded-full mb-4 border-2 border-white/30">
+        <p class="text-gray-800 mb-4">“Excellent service and support throughout the project. Our traffic increased significantly!”</p>
+        <h3 class="font-semibold text-lg text-black">Sweta Singh</h3>
+        <span class="text-sm text-gray-600">Owner, Prescripto</span>
+      </div>
+      <div class="bg-white/20 backdrop-blur-md rounded-xl p-6 shadow-lg hover:scale-105 transform transition duration-300">
+        <img src="https://i.pravatar.cc/100?img=3" alt="Client 3" class="w-16 h-16 mx-auto rounded-full mb-4 border-2 border-white/30">
+        <p class="text-gray-800 mb-4">“Professional, creative, and timely. I highly recommend their web development services.”</p>
+        <h3 class="font-semibold text-lg text-black">Ritesh Sharma</h3>
+        <span class="text-sm text-gray-600">Founder, Helpfarmner</span>
+      </div>
+      <div class="bg-white/20 backdrop-blur-md rounded-xl p-6 shadow-lg hover:scale-105 transform transition duration-300">
+        <img src="https://i.pravatar.cc/100?img=4" alt="Client 4" class="w-16 h-16 mx-auto rounded-full mb-4 border-2 border-white/30">
+        <p class="text-gray-800 mb-4">“Their creativity and attention to detail made our website stand out. Truly amazing work!”</p>
+        <h3 class="font-semibold text-lg text-black">Rohit Agarwal</h3>
+        <span class="text-sm text-gray-600">Business Owner, Fitness Point</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-16 px-6 md:px-16">
+  <h2 class="text-4xl font-bold text-center mb-8 gradient-text">Let's Build Something Amazing</h2>
+  <p class="text-gray-300 text-center mb-12 max-w-2xl mx-auto">Have a project in mind? Contact WebWiz today and let's turn your ideas into reality.</p>
+  
+  <div class="max-w-3xl mx-auto glass p-10 rounded-3xl shadow-xl">
+    <form action="https://formspree.io/f/xeorznnw" method="POST" class="space-y-6">
+      <input type="text" name="name" placeholder="Your Name" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white outline-none">
+      <input type="email" name="email" placeholder="Email Address" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white outline-none">
+      <input type="number" name="number" placeholder="Contact Number" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white outline-none">
+      <textarea placeholder="Your Message" name="message" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white outline-none h-32"></textarea>
+      <button type="submit" class="btn-glass w-full text-center">Send Message</button>
+    </form>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-16 px-6 md:px-16 glass mt-10 rounded-t-3xl fade">
+    <div class="grid md:grid-cols-4 gap-10 max-w-7xl mx-auto">
+      <div>
+        <h2 class="text-2xl font-bold mb-3 teal-gradient">⚪ WebWiz</h2>
+        <p class="text-gray-400">
+          A team of strategic creators and digital innovators united to build something extraordinary.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-semibold mb-3">Pages</h3>
+        <ul class="space-y-2 text-gray-400">
+          <li><a href="index.html" class="hover:text-teal-400">Home</a></li>
+          <li><a href="about.html" class="hover:text-teal-400">About</a></li>
+          <li><a href="portfolio.html" class="hover:text-teal-400">Portfolio</a></li>
+          <li><a href="contact.html" class="hover:text-teal-400">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-semibold mb-3">Resources</h3>
+        <ul class="space-y-2 text-gray-400">
+          <li><a href="#" class="hover:text-teal-400">License</a></li>
+          <li><a href="#" class="hover:text-teal-400">Changelog</a></li>
+          <li><a href="#" class="hover:text-teal-400">Support</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-semibold mb-3">Subscribe</h3>
+        <div class="flex bg-white/10 backdrop-blur-lg rounded-full overflow-hidden">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="px-4 py-2 bg-transparent text-white outline-none flex-grow"
+          />
+          <button class="px-5 py-2 bg-teal-400 text-black rounded-full m-1 hover:bg-white transition">
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10 text-center text-gray-500 text-sm">
+      <p>© 2025 WebWiz — Crafted with ❤️ in India</p>
+    </div>
+  </footer>
+
+</body>
+</html>
