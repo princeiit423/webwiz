@@ -156,16 +156,65 @@
     </div>
 
     <!-- Right Form Section -->
-    <div class="glass p-8 rounded-3xl shadow-lg relative">
-      <form action="https://formspree.io/f/xeorznnw" method="post" class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <input name="first" type="text" placeholder="First name" class="p-3 rounded-xl bg-black/40 border border-gray-700 text-white focus:border-teal-400 focus:ring-teal-400 focus:ring-1 outline-none w-full">
-        <input name="second" type="text" placeholder="Last name" class="p-3 rounded-xl bg-black/40 border border-gray-700 text-white focus:border-teal-400 focus:ring-teal-400 focus:ring-1 outline-none w-full">
-        <input name="email" type="email" placeholder="Email" class="p-3 rounded-xl bg-black/40 border border-gray-700 text-white focus:border-teal-400 focus:ring-teal-400 focus:ring-1 outline-none w-full">
-        <input name="phone" type="tel" placeholder="Phone" class="p-3 rounded-xl bg-black/40 border border-gray-700 text-white focus:border-teal-400 focus:ring-teal-400 focus:ring-1 outline-none w-full">
-        <textarea name="message" placeholder="Message" class="p-3 rounded-xl bg-black/40 border border-gray-700 text-white focus:border-teal-400 focus:ring-teal-400 focus:ring-1 outline-none w-full col-span-2 h-32 resize-none"></textarea>
-        <button class="btn-glass col-span-2 justify-center w-full mt-4 text-lg">Submit Now</button>
-      </form>
-    </div>
+<div class="glass p-6 sm:p-8 rounded-3xl shadow-lg relative w-full max-w-2xl mx-auto">
+  <form 
+    action="https://formspree.io/f/xeorznnw" 
+    method="post" 
+    class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6"
+  >
+    <!-- First Name -->
+    <input 
+      name="first" 
+      type="text" 
+      placeholder="First name" 
+      class="p-3 sm:p-4 rounded-xl bg-black/40 border border-gray-700 text-white placeholder-gray-400 focus:border-teal-400 focus:ring-1 focus:ring-teal-400 outline-none w-full transition-all duration-300"
+      required
+    >
+
+    <!-- Last Name -->
+    <input 
+      name="second" 
+      type="text" 
+      placeholder="Last name" 
+      class="p-3 sm:p-4 rounded-xl bg-black/40 border border-gray-700 text-white placeholder-gray-400 focus:border-teal-400 focus:ring-1 focus:ring-teal-400 outline-none w-full transition-all duration-300"
+      required
+    >
+
+    <!-- Email -->
+    <input 
+      name="email" 
+      type="email" 
+      placeholder="Email" 
+      class="p-3 sm:p-4 rounded-xl bg-black/40 border border-gray-700 text-white placeholder-gray-400 focus:border-teal-400 focus:ring-1 focus:ring-teal-400 outline-none w-full transition-all duration-300"
+      required
+    >
+
+    <!-- Phone -->
+    <input 
+      name="phone" 
+      type="tel" 
+      placeholder="Phone" 
+      class="p-3 sm:p-4 rounded-xl bg-black/40 border border-gray-700 text-white placeholder-gray-400 focus:border-teal-400 focus:ring-1 focus:ring-teal-400 outline-none w-full transition-all duration-300"
+    >
+
+    <!-- Message -->
+    <textarea 
+      name="message" 
+      placeholder="Message" 
+      class="p-3 sm:p-4 rounded-xl bg-black/40 border border-gray-700 text-white placeholder-gray-400 focus:border-teal-400 focus:ring-1 focus:ring-teal-400 outline-none w-full col-span-1 sm:col-span-2 h-32 resize-none transition-all duration-300"
+      required
+    ></textarea>
+
+    <!-- Submit -->
+    <button 
+      type="submit" 
+      class="btn-glass col-span-1 sm:col-span-2 justify-center w-full mt-4 py-3 sm:py-4 text-base sm:text-lg font-semibold"
+    >
+      Submit Now
+    </button>
+  </form>
+</div>
+
   </div>
 
   <!-- Google Map -->
