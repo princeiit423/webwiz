@@ -36,6 +36,8 @@
 <meta name="twitter:image" content="https://webwizcom.in/assets/webwiz-banner.png">
   <script src="https://cdn.tailwindcss.com"></script>
    <link rel="icon" href="webwiz.jpg" type="image/png">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -336,6 +338,92 @@
   </div>
 </section>
 
+<section id="whychooseus" class="py-24 px-6 md:px-16 text-white bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden">
+  <div class="max-w-6xl mx-auto text-center mb-16">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-teal-300 to-blue-400 bg-clip-text text-transparent drop-shadow-lg">
+      🚀 Why Choose <span class="text-white/90">WebWiz</span>
+    </h2>
+    <p class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto">
+      We blend creativity, performance, and strategy to build digital experiences that shine.
+    </p>
+  </div>
+
+  <!-- Cards Container -->
+  <div class="relative flex flex-col md:flex-row md:flex-wrap justify-center items-stretch gap-8 md:gap-12">
+    
+    <!-- Card 1 -->
+    <div class="why-card opacity-0 translate-y-10 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl shadow-lg p-8 md:w-[45%] lg:w-[30%] hover:bg-white/20 transition-all duration-300">
+      <div class="flex flex-col items-center text-center space-y-4">
+        <div class="w-14 h-14 rounded-full bg-gradient-to-r from-teal-400 to-blue-500 flex items-center justify-center text-2xl font-bold">1</div>
+        <h3 class="text-xl font-semibold text-teal-300">Creative & Unique Designs</h3>
+        <p class="text-gray-300">We craft pixel-perfect websites that reflect your brand’s identity — modern, minimal, and unforgettable.</p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="why-card opacity-0 translate-y-10 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl shadow-lg p-8 md:w-[45%] lg:w-[30%] hover:bg-white/20 transition-all duration-300">
+      <div class="flex flex-col items-center text-center space-y-4">
+        <div class="w-14 h-14 rounded-full bg-gradient-to-r from-teal-400 to-blue-500 flex items-center justify-center text-2xl font-bold">2</div>
+        <h3 class="text-xl font-semibold text-teal-300">Fast & SEO Optimized</h3>
+        <p class="text-gray-300">Speed matters. We ensure lightning-fast load times and SEO-friendly structure to rank you higher on Google.</p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="why-card opacity-0 translate-y-10 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl shadow-lg p-8 md:w-[45%] lg:w-[30%] hover:bg-white/20 transition-all duration-300">
+      <div class="flex flex-col items-center text-center space-y-4">
+        <div class="w-14 h-14 rounded-full bg-gradient-to-r from-teal-400 to-blue-500 flex items-center justify-center text-2xl font-bold">3</div>
+        <h3 class="text-xl font-semibold text-teal-300">Free Hosting & Domain</h3>
+        <p class="text-gray-300">Get a free domain and hosting for 1 year — we make sure you launch with zero hidden costs.</p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="why-card opacity-0 translate-y-10 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl shadow-lg p-8 md:w-[45%] lg:w-[30%] hover:bg-white/20 transition-all duration-300">
+      <div class="flex flex-col items-center text-center space-y-4">
+        <div class="w-14 h-14 rounded-full bg-gradient-to-r from-teal-400 to-blue-500 flex items-center justify-center text-2xl font-bold">4</div>
+        <h3 class="text-xl font-semibold text-teal-300">24×7 Client Support</h3>
+        <p class="text-gray-300">We stay connected — before, during, and after launch. Quick fixes, updates, and guidance anytime you need.</p>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="why-card opacity-0 translate-y-10 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl shadow-lg p-8 md:w-[45%] lg:w-[30%] hover:bg-white/20 transition-all duration-300">
+      <div class="flex flex-col items-center text-center space-y-4">
+        <div class="w-14 h-14 rounded-full bg-gradient-to-r from-teal-400 to-blue-500 flex items-center justify-center text-2xl font-bold">5</div>
+        <h3 class="text-xl font-semibold text-teal-300">Built for All Devices</h3>
+        <p class="text-gray-300">Your website will look and perform perfectly across mobiles, tablets, and desktops — always responsive.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Animated Directional Arrow -->
+  <div class="absolute left-1/2 transform -translate-x-1/2 mt-16">
+    <svg class="w-8 h-8 text-teal-300 animate-bounce opacity-70" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+    </svg>
+  </div>
+</section>
+
+<!-- Scroll trigger Section -->
+<section id="scroll-digital" class="relative w-full bg-gradient-to-r from-black via-gray-900 to-black text-white overflow-hidden py-32">
+  <div class="sticky top-0 h-screen flex items-center justify-start px-10 md:px-24 overflow-hidden">
+    <div class="scroll-text flex space-x-24">
+      <h2 class="text-[10vw] md:text-[8vw] font-extrabold tracking-tight bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent whitespace-nowrap drop-shadow-lg">
+        We help you go digital
+      </h2>
+      <h2 class="text-[10vw] md:text-[8vw] font-extrabold tracking-tight bg-gradient-to-r from-blue-400 to-teal-300 bg-clip-text text-transparent whitespace-nowrap drop-shadow-lg">
+        We create digital impact
+      </h2>
+      <h2 class="text-[10vw] md:text-[8vw] font-extrabold tracking-tight bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent whitespace-nowrap drop-shadow-lg">
+        Building brands that click
+      </h2>
+    </div>
+  </div>
+
+</section>
+
 <!-- Pricing Section -->
 <section id="pricing" class="py-20 px-6 md:px-16 text-center relative overflow-hidden">
   <h3 class="text-teal-400 font-semibold text-lg mb-2">Pricing Plans</h3>
@@ -422,6 +510,8 @@
     </div>
   </div>
 </section>
+
+
 <section id="faq" class="py-20 px-6 md:px-12 lg:px-24 text-white">
   <div class="max-w-4xl mx-auto">
     <h2 class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-teal-300 bg-clip-text text-transparent drop-shadow-lg">
@@ -609,6 +699,38 @@
       answer.classList.toggle("hidden");
       icon.classList.toggle("rotate-180");
     });
+  });
+   gsap.registerPlugin(ScrollTrigger);
+
+  gsap.utils.toArray(".why-card").forEach((card, i) => {
+    gsap.to(card, {
+      scrollTrigger: {
+        trigger: card,
+        start: "top 85%",
+        toggleActions: "play none none none",
+      },
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      ease: "power3.out",
+      delay: i * 0.1
+    });
+  });
+   gsap.registerPlugin(ScrollTrigger);
+
+  const scrollContainer = document.querySelector(".scroll-text");
+
+  gsap.to(scrollContainer, {
+    xPercent: -70,
+    ease: "none",
+    scrollTrigger: {
+      trigger: "#scroll-digital",
+      start: "top top",
+      end: "+=3000",
+      scrub: true,
+      pin: true,
+      anticipatePin: 1
+    }
   });
 </script>
 </body>
